@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title> Adivinha o número </title>
+</head>
+
+<body>
+<h2> Adivinha o número (0 a 20) </h2>
+<fieldset>
+	<legend> Inserir informação </legend>
+	<label for="guess"> Nº aleatório entre 0 e</label>
+	<input type="text" id="numero_maximo" value="20" />
+	<br/> <br/>
+	
+	<label for="guess"> Nº total de tentativas: </label>
+	<input type="text" id="total_tentativas" value="5" />
+	<br/> <br/>
+	
+	<label for="guess"> Minha tentativa: </label>
+	<input type="text" id="caixa_tentativa" value="" />
+	<br/> <br/>
+	
+	<input type="button" onClick="minhatentativa()" value="Submeter" />
+	
+	<input type="button" id="mostrar_tentativas" 
+		   onClick="mostrar_tentativas()" value="Mostrar Tentativas" />
+	
+	<input type="button" onClick="gerar_aleatorio(true)" value="Novo jogo" />
+	<br/> <br/>
+	
+	<input id="batota" type="checkbox" value="batota"
+		   onClick="mostrar_numero()" />
+	
+	<label for="batota">batota</label>
+	<div id="mostrar_batota" style="display: none;"> 
+		<label for="numero_certo"> número correto </label>
+		<input id="numero_certo" type="text" />
+	</div>
+	
+</fieldset>
+	
+<fieldset id="tentativas" class="tentativas">
+	<legend> Resultado </legend>
+	<textarea id="resultado" name="resultado"
+			  rows="5" style="width: 100%;"></textarea>
+</fieldset>
+
+	
+</body>
+	
+<script 
+	src="javascript.js">
+</script>
+	
+</html>
